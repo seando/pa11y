@@ -44,7 +44,7 @@ function reportInfo(message) {
 
 function reportResults(results, url) {
 	console.log('\n' + chalk.underline('Results for ' + url + ':'));
-	if (results.length === 0) {
+	if (results && results.length === 0) {
 		return console.log('\n' + chalk.green('No errors found!') + '\n');
 	}
 	results.forEach(reportResult);
